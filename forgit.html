@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 PAGE</title>
+    <link rel="stylesheet" type="text/css" href="feb08Home.css">
+    <script src="feb8Home.jss"></script>
+</head>
+
+<body>
+    <h1>This is an h1</h1>
+    <h1>This is another h1</h1>
+    <h2>This is an h2</h2>
+    <h3>This is an h3</h3>
+    <h3>This is another h3</h3>
+
+
+    <h2>I'm HEADING your way!</h2>
+    <div id="top">
+        <p class="new">Where do I go?</p>
+    </div>
+    <div id="main">
+        <h1>Mary's Ultimate page</h1>
+        <p>blah blah blah... welcome to my ultimate PAGE!!</p>
+        <h2><span class="announcement">Annual Members Meeting</span></h2>
+        <p>
+            <span class="firstword">The</span> Annual Members Meeting of the Ultimate players association will take place on Sunday, January 20, ...
+        </p>
+    </div>
+    <p>
+        I'am a paragraph; what color am I?
+    </p>
+    <div class="central">
+        <p>
+            I'am another paragraph; what color am I?
+        </p>
+        <ul>
+            <li>I am a list item; what color am I?</li>
+        </ul>
+    </div>
+</body>
+<ul class="newsitem">
+    <li>Ultimate frisbee declared an Olypic sport</li>
+    <li>George W. Bush hit by frisbee, hospitalized</li>
+    <li>Frisbee catches dog</li>
+    <li>Study: Frisbee players more wealthy, virile</li>
+    <ul>
+        <li>more wealthy</li>
+        <li>better looking</li>
+        <li>more virile</li>
+    </ul>
+</ul>
+<style>
+    h1 {
+        padding: 1em;
+        background-color: yellow;
+        border: 3px solid black;
+    }
+    
+    h2 {
+        padding: 0em;
+        background-color: #BBFFBB;
+    }
+    
+    h3 {
+        padding-left: 200px;
+        padding-top: 30px;
+        background-color: fuchsia;
+    }
+    /*h2 {
+        border: 5px solid black;
+        border-left: thick dotted #cc0088;
+        border-bottom-color: rgb(red, green, blue);
+        border-bottom-style: double;
+        border-collapse: collapse;
+    }*/
+    
+    body {
+        background-color: grey;
+        color: blue;
+        border: 2px #000000;
+    }
+    
+    body>p,
+    ul {
+        color: red;
+    }
+    
+    .central {
+        color: green;
+    }
+    
+    .central p,
+    .central ul,
+    .central li {
+        background-color: cyan;
+    }
+    
+    .main {
+        background-color: #ddffdd;
+        font: 12pt "tahoma", "Arial", sans-serif;
+    }
+    
+    .firstword {
+        font-size: 32pt;
+    }
+    
+    .announcement {
+        background-color: blue;
+        color: white;
+    }
+    
+    .newsitem>li {
+        background-color: yellow;
+        font-weight: bold;
+    }
+    
+    li {
+        background-color: cyan;
+        font-weight: normal;
+    }
+    
+    div#banner * {
+        border: 2px solid black;
+    }
+    
+    div p {
+        text-align: left;
+    }
+    
+    #top>p {
+        text-align: center;
+    }
+    
+    p {
+        text-align: right;
+    }
+    
+    .new {
+        text-align: justify;
+    }
+</style>

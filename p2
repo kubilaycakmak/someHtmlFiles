@@ -1,0 +1,50 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import javax.swing.*;
+public class feb09 extends JFrame{
+	private int width, height, maxVal;
+	private int[] pixels;
+	private DrawingPanel dp;
+	feb09(){
+		try {
+			Scanner sc = new Scanner(new File("agascii.pgm"));
+			System.out.println(sc.next());
+			
+			width = Integer.parseInt(sc.next());
+			height = Integer.parseInt(sc.next());
+			maxVal = Integer.parseInt(sc.next());
+			pixels = new int[width*height];
+			
+			for(int i = 0; i<width * height; i++) {
+				pixels[i] = Integer.parseInt(sc.next());
+			}
+			dp = new DrawingPanel();
+			add(dp);
+		}catch(FileNotFoundException e) {}
+		
+	}
+	class DrawingPanel extends JPanel{
+		@Override
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			for(int row = 0; row < height; row++) {
+				for(int col = 0; col < width; col++) {
+					int intColor = pixels[row*width+col];
+					g.setColor(new Color(intColor, intColor, intColor));
+					g.fillRect(row, col, 1, 1);
+				}
+			}
+		}
+	}
+	public static void main(String[] args) {
+		feb09 w = new feb09();
+		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		w.setSize(618,640);
+		w.setVisible(true);
+	}
+	
+}

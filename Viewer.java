@@ -77,6 +77,7 @@ public class Viewer {
 						pixels[i] = Integer.parseInt(sc.next());
 					}
 				}catch(FileNotFoundException e2) {}
+				//
 			}
 		});
 		jmiOpen.addActionListener(new ActionListener() {
